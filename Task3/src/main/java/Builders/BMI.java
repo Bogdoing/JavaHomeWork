@@ -1,9 +1,4 @@
-package model;
-
-import javafx.beans.binding.Bindings;
-import javafx.beans.binding.NumberBinding;
-import javafx.beans.property.IntegerProperty;
-import javafx.beans.property.SimpleIntegerProperty;
+package Builders;
 
 public class BMI {
     private float height;

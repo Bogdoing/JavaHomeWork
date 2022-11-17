@@ -54,7 +54,7 @@
         <GridPane.margin>
             <Insets top="20.0" />
         </GridPane.margin>
-        <Label fx:id="welcomeText" text="Площадь" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <Label fx:id="welcomeText" text="Толщина обводки" GridPane.columnIndex="0" GridPane.rowIndex="0" />
         <TextField fx:id="textField" text="5" GridPane.columnIndex="1" GridPane.rowIndex="0" />
         <Button fx:id="delete" mnemonicParsing="false" onAction="#delete" text="Delete" GridPane.columnIndex="2" GridPane.rowIndex="0" />
     </GridPane>

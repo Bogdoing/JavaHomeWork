@@ -6,23 +6,17 @@ import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.stage.DirectoryChooser;
 import javafx.stage.FileChooser;
-import javafx.stage.Stage;
-import model.ImageCollection;
-import model.Iterator;
+import Builders.ImageCollection;
+import Builders.Iterator;
 import javafx.event.ActionEvent;
 import javafx.util.Duration;
 
 import java.io.File;
-import java.io.FilenameFilter;
 import java.net.URL;
-import java.util.Arrays;
 import java.util.ResourceBundle;
 
 

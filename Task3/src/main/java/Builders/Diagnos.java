@@ -1,4 +1,4 @@
-package model;
+package Builders;
 
 public class Diagnos {
     private int sicr;

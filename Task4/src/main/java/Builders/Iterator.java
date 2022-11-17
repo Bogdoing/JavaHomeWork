@@ -1,4 +1,4 @@
-package model;
+package Builders;
 
 public interface Iterator {
     public boolean hasNext();
