@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.TextField?>
+<GridPane hgap="10" vgap="10"
+          alignment="CENTER" xmlns:fx="http://javafx.com/fxml"
+          fx:controller="com.example.task3.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <TextField fx:id="tfves" text="ves" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+    <TextField fx:id="tfrost" text="rost"  GridPane.columnIndex="0" GridPane.rowIndex="1" />
+
+    <GridPane hgap="15" vgap="10" GridPane.columnIndex="0" GridPane.rowIndex="2">
+        <Button  GridPane.columnIndex="0" GridPane.rowIndex="0" text="Calc!" onAction="#onHelloButtonClick"/>
+        <Label GridPane.columnIndex="1" GridPane.rowIndex="0" text="text" fx:id="labeltext"/>
+    </GridPane>
+
+    <Label GridPane.columnIndex="0" GridPane.rowIndex="3" text="text" fx:id="lt" />
+
+</GridPane>
