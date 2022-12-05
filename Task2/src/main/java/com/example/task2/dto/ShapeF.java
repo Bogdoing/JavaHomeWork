@@ -25,4 +25,27 @@ public class ShapeF {
         }
         return shape;
     }
+    public Shape getShapeInt(int shapeString){
+        Shape shape = null;
+        switch (shapeString){
+            case 3:
+                shape = new SixSidex();
+
+                System.out.println("SixSidex");
+                break;
+            case 1:
+                shape = new FourSides();
+                System.out.println("FourSides");
+                break;
+            case 0:
+                shape = new OvalSides();
+                System.out.println("OvalSides");
+                break;
+            case 2:
+                shape = new FourSidesBorder();
+                System.out.println("FourSidesBorder");
+                break;
+        }
+        return shape;
+    }
 }

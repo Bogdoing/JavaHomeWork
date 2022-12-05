@@ -10,7 +10,7 @@
         <module name="Task4" />
         <module name="Task3" />
         <module name="demo" />
-        <module name="Task5" />
+        <module name="Task5_stroitel" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -19,6 +19,7 @@
       <module name="Task3" target="18" />
       <module name="Task4" target="18" />
       <module name="Task5" target="18" />
+      <module name="Task5_stroitel" target="18" />
     </bytecodeTargetLevel>
   </component>
 </project>

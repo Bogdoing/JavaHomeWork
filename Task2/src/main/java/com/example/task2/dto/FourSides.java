@@ -20,8 +20,12 @@ public class FourSides extends Shape {
         grC.fillRect(200 + (widht_border / 2), 40 + (widht_border / 2), width - widht_border, height - widht_border);
     }
 
+
     @Override
     public double square() {
         return width * height;
+    }
+    public String toString(){
+        return "КВАДРАТ";
     }
 }

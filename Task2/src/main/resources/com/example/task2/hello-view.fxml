@@ -15,7 +15,10 @@
     </padding>
 
     <GridPane GridPane.columnIndex="0" GridPane.rowIndex="0" style="-fx-background-color: #ccc">
-        <Canvas fx:id="canvas" height="230.0"  width="305.0"  />
+        <ListView fx:id="listview" GridPane.rowIndex="0" GridPane.columnIndex="0" maxHeight="100"></ListView>
+        <Canvas fx:id="canvas" height="230.0"  width="305.0"
+                GridPane.rowIndex="1" GridPane.columnIndex="0"
+                onMousePressed="#onMousePressed"/>
         <!--onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed"-->
     </GridPane>
 

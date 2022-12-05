@@ -11,8 +11,11 @@ public class OvalSides extends Shape {
 
     private final double width = 50;
     private final double height = 60;
+
+    private Color colortest ;
     @Override
     public void draw(GraphicsContext grC, Color color, Color color_border, double widht_border) {
+        this.colortest = color;
         grC.setFill(color);
         grC.fillOval(30, 40, width, height);
         grC.setStroke(color_border);
@@ -32,5 +35,8 @@ public class OvalSides extends Shape {
     @Override
     public double square() {
         return  Math.PI * width * height;
+    }
+    public String toString(){
+        return "ОВАЛ " + colortest;
     }
 }

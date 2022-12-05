@@ -3,15 +3,21 @@ package com.example.task2;
 import com.example.task2.dto.*;
 import com.example.task2.model.Shape;
 import javafx.animation.AnimationTimer;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 
-public class HelloController {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class HelloController implements Initializable {
     @FXML
     private TextField textField;
     @FXML
@@ -24,6 +30,10 @@ public class HelloController {
     private ColorPicker colorPickerBorder = new ColorPicker();
     @FXML
     private ChoiceBox choicebox;
+    @FXML
+    private ListView listview;
+
+    private ObservableList<Shape> content;
     private GraphicsContext grC;
     private Shape shape;
 
@@ -113,6 +123,9 @@ public class HelloController {
         int text_border = Integer.parseInt(text);
         System.out.println("Text = " + text + "  " + "Text int = " + text);
 
+        //listview.setItems(items);
+        //listview.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
+
         String str = choicebox.getValue().toString();
         System.out.println(str);
         switch (str) {
@@ -143,9 +156,58 @@ public class HelloController {
 
         //textField.setText(String.valueOf(shape.square()));
     }
+
     @FXML
     protected void delete() {
         grC.clearRect(0, 0, 700, 800);
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        OvalSides oval = new OvalSides();
+
+        FourSides fourSides = new FourSides();
+
+        FourSidesBorder fourSidesBorder = new FourSidesBorder();
+
+        SixSidex sixSidex = new SixSidex();
+
+        content = FXCollections.observableArrayList(oval, fourSides, fourSidesBorder, sixSidex);
+
+        listview.setItems(content);
+
+        listview.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
+
+
+    }
+    @FXML
+    protected void onMousePressed(MouseEvent mouseEvent){
+        int index = listview.getSelectionModel().getSelectedIndex(); //получение индекса выбора из списка
+        Color color = colorPicker.getValue();
+        Color color_border = colorPickerBorder.getValue();
+        System.out.println("New Color's RGB = " + color.getRed() + " " + color.getGreen() + " " + color.getBlue());
+
+        String text = textField.getText();
+        int text_border = Integer.parseInt(text);
+        System.out.println("Text = " + text + "  " + "Text int = " + text);
+
+        System.out.println(index);
+        ShapeF shapeF = new ShapeF();
+        shapeF.getShapeInt(index);
+
+
+        //shape = shapeF.getShapeInt(index);
+        shape = (Shape)content.get(index).clone();// создание копии фигуры
+
+        grC = canvas.getGraphicsContext2D();
+        shape.setColor(color);
+        if (shape instanceof SixSidex) {
+            shape.draw(grC, canvas, shape.getColor(), color_border, text_border);
+        } else {
+            shape.draw(grC, shape.getColor(), color_border, text_border);
+        }
+        //shape.setColor(colorPicker.getValue());// установка цвета заполнения фигуры по значению элемента управления colorPicker
+        //shape.draw(gc, mouseEvent.getX(), mouseEvent.getY());// рисование копии фигуры в точке, полученной из события MouseEvent x
     }
 
         /*

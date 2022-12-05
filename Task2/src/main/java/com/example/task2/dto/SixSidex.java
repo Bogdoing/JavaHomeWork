@@ -38,4 +38,7 @@ public class SixSidex extends Shape {
     public double square() {
         return (x_cords.length * (x_cords[0] * y_cords[0])) / (4.0 * Math.tan((Math.PI / x_cords.length)));
     }
+    public String toString(){
+        return "Многоугольник";
+    }
 }

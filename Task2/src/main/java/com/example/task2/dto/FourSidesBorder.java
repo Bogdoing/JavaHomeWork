@@ -31,4 +31,7 @@ public class FourSidesBorder extends Shape {
     public double square() {
         return width * height;
     }
+    public String toString(){
+        return "Прямоугольник(скруглёный)";
+    }
 }

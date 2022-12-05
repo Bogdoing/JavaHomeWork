@@ -5,19 +5,28 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
 
-public abstract class Shape {
+public abstract class Shape implements Cloneable {
     private Color color;
     private Color setColorPicker;
     private double height;
     private double weight;
     private double square;
 
-    public void draw(GraphicsContext grC, Color color, Color setColorPicker, double widht_border) {};
-    public void draw(GraphicsContext grC, Canvas canvas, Color color, Color setColorPicker, double widht_border) {};
+    public void draw(GraphicsContext grC, Color color, Color setColorPicker, double widht_border) {
+    }
+
+    ;
+
+    public void draw(GraphicsContext grC, Canvas canvas, Color color, Color setColorPicker, double widht_border) {
+    }
+
+    ;
 
     public double square() {
         return square;
-    };
+    }
+
+    ;
 
     public Color getColor() {
         return color;
@@ -41,5 +50,15 @@ public abstract class Shape {
 
     public void setWeight(double weight) {
         this.weight = weight;
+    }
+
+    public Object clone() {
+        Object clone = null;
+        try {
+            clone = super.clone();
+        } catch (CloneNotSupportedException e) {
+            e.printStackTrace();
+        }
+        return clone;
     }
 }
