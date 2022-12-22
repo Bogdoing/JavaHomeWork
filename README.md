@@ -1,5 +1,11 @@
 # JavaHomeWork
 
+<ul>
+<li>Репозиторий Prototype - https://github.com/Bogdoing/Prototype</li>
+<li>Репозиторий Prototype - https://github.com/Bogdoing/Observer</li>
+</ul>
+
+
 1. [Task1 : Калькулятор(длегирование)](#Task1)
 2. [Task2 : Фигуры(фабричный метод)](#Task2)
 3. [Task3 : BMI](#Task3)
