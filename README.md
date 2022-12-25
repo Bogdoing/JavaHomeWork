@@ -2,7 +2,7 @@
 
 <ul>
 <li>Репозиторий Prototype - https://github.com/Bogdoing/Prototype</li>
-<li>Репозиторий Prototype - https://github.com/Bogdoing/Observer</li>
+<li>Репозиторий Observer - https://github.com/Bogdoing/Observer</li>
 </ul>
 
 
